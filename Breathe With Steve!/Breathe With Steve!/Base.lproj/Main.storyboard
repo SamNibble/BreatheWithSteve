@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Breathe_With_Steve_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Land" translatesAutoresizingMaskIntoConstraints="NO" id="iC4-qb-r4g">
+                                <rect key="frame" x="0.0" y="-50" width="414" height="966"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QdW-mj-XTC">
+                                <rect key="frame" x="155" y="285" width="104" height="77"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="18"/>
+                                <state key="normal" title="Breathe!" backgroundImage="bubble">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fe6-FQ-DW7"/>
+                                    <action selector="breatheButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NVN-Wy-Ptm"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="raZ-oB-sIu">
+                                <rect key="frame" x="148" y="392" width="118" height="71"/>
+                                <connections>
+                                    <action selector="slideTimer:" destination="BYZ-38-t0r" eventType="valueChanged" id="5P9-2k-vns"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Minutes?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2y-va-mfK">
+                                <rect key="frame" x="154.5" y="467" width="105" height="23"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QdW-mj-XTC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="3Ib-Ms-iLD"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="raZ-oB-sIu" secondAttribute="bottom" constant="400" id="4kU-W4-z5a"/>
+                            <constraint firstItem="I2y-va-mfK" firstAttribute="top" secondItem="raZ-oB-sIu" secondAttribute="bottom" constant="5" id="9Jo-1S-Df2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QdW-mj-XTC" secondAttribute="trailing" constant="155" id="AeX-xv-jKm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="raZ-oB-sIu" secondAttribute="trailing" constant="130" id="Rql-rQ-dtZ"/>
+                            <constraint firstItem="raZ-oB-sIu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="130" id="cU7-rZ-iZU"/>
+                            <constraint firstItem="QdW-mj-XTC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="241" id="cVO-qs-0bZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QdW-mj-XTC" secondAttribute="bottom" constant="500" id="dYs-pP-OsP"/>
+                            <constraint firstItem="raZ-oB-sIu" firstAttribute="top" secondItem="QdW-mj-XTC" secondAttribute="bottom" constant="30" id="uIS-ZL-0Io"/>
+                            <constraint firstItem="I2y-va-mfK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vvm-C8-27Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="EndSound" destination="I2y-va-mfK" id="I0W-oC-i1K"/>
+                        <outlet property="Slider" destination="raZ-oB-sIu" id="8QV-95-2fp"/>
+                        <outlet property="breatheButton" destination="QdW-mj-XTC" id="Et9-Uu-ZEF"/>
+                        <outlet property="displayTime" destination="I2y-va-mfK" id="V8Q-ah-1xM"/>
+                        <outlet property="landBackground" destination="iC4-qb-r4g" id="XN2-DU-4Fp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Land" width="4032" height="3024"/>
+        <image name="bubble" width="960" height="720"/>
+    </resources>
+</document>
